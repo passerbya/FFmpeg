@@ -144,6 +144,7 @@ static int config_input(AVFilterLink *inlink)
 
     ff_draw_init(&ass->draw, inlink->format, ass->alpha ? FF_DRAW_PROCESS_ALPHA : 0);
 
+    ass_set_storage_size (ass->renderer, inlink->w, inlink->h);
     ass_set_frame_size  (ass->renderer, inlink->w, inlink->h);
     if (ass->original_w && ass->original_h)
         ass_set_aspect_ratio(ass->renderer, (double)inlink->w / inlink->h,
