@@ -119,7 +119,7 @@ $(BIN2CEXE): ffbuild/bin2c_host.o
 	$(METALCC) $< -o $@
 
 %.metallib: %.metal.air
-	$(METALLIB) --split-module-without-linking $< -o $@
+	$(METALLIB) --split-module $< -o $@
 
 %.metallib.c: %.metallib $(BIN2CEXE)
 	$(BIN2C) $< $@ $(subst .,_,$(basename $(notdir $@)))
