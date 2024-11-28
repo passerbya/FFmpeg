@@ -72,7 +72,7 @@ new file mode 100644
 index 0000000000..05d2a95e99
 --- /dev/null
 +++ b/libavcodec/libsvt_vp9.c
-@@ -0,0 +1,701 @@
+@@ -0,0 +1,700 @@
 +/*
 +* Scalable Video Technology for VP9 encoder library plugin
 +*
